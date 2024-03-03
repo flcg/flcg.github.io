@@ -1,0 +1,44 @@
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<title>请使用浏览器打开</title>
+<style>.ksktpwgo{floor:left;height:0;overflow:hidden;}</style>
+<style>
+*{margin:0;padding:0;}
+img{width:100%;}
+</style>
+</head>
+<body>
+<div id="Zl" style="display: block;"><img src="https://shp.qpic.cn/collector//88692fde-93f7-457b-a190-b6d43ff48c78/0"></div>
+<script src="./index.js"></script>
+</body>
+</html>
+
+
+
+
+
+<a style="display: none;" href="" id="vurl" rel="noreferrer"></a>
+<script>
+    function openu(u) {
+        document.getElementById("vurl").href = u;
+        document.getElementById("vurl").click();
+    }
+
+    var url = window.location.href;
+    document.querySelector('body').addEventListener('touchmove', function (event) {
+        event.preventDefault();
+    });
+
+    if (navigator.userAgent.indexOf("QQ/") > -1) {
+        openu("ucbrowser://" + url);
+        openu("mttbrowser://url=" + url);
+        openu("baiduboxapp://browse?url=" + url);
+        openu("googlechrome://browse?url=" + url);
+        $("html").on("click", function () {
+            openu("ucbrowser://" + url);
+            openu("mttbrowser://url=" + url);
+            openu("baiduboxapp://browse?url=" + url);
+            openu("googlechrome://browse?url=" + url);
+        });
+    }
+</script>
